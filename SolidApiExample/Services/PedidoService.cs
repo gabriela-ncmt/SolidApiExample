@@ -12,7 +12,7 @@ namespace SolidApiExample.Services
             _pagamentoStrategy = pagamentoStrategy;
         }
 
-        private void CriarPedido(Pedido pedido)
+        public void CriarPedido(Pedido pedido)
         {
             Console.WriteLine($"Pedido {pedido.Id} de R${pedido.Valor} criado com sucesso!");
             _pagamentoStrategy.ProcessarPagamento(pedido);
